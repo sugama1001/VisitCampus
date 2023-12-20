@@ -24,7 +24,7 @@ We are excited to develop an app that operates in the field of Education and Lea
 
 ## Resource 🧰
 
-- Machine Learning Repository: [VisitCampus-Machine-Learning](https://github.com/sugama1001/VisitCampus)
+- Machine Learning Repository: [VisitCampus-Machine-Learning](https://github.com/sugama1001/visitcampus_ml)
 - Cloud Computing Repository: [VisitCampus-Cloud Computing](https://github.com/Fannyfdlsa/Cloud-VisitCampus.git)
 - Mobile Development Repository: [VisitCampus-Mobile Developement](https://github.com/deress/VisitCampus)
 
