@@ -1,7 +1,7 @@
 # VisitCampus
 
 <p align="center">
-    <img src="">
+    <img src="https://github.com/sugama1001/VisitCampus/blob/main/visitCampus_cover.png">
 </p>
 
 ## About The Project 💬
