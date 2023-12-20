@@ -24,9 +24,9 @@ We are excited to develop an app that operates in the field of Education and Lea
 
 ## Resource 🧰
 
-- Machine Learning Repository: [Halowisata-Machine-Learning](#)
-- Cloud Computing Repository: [Halowisata-Cloud](#)
-- Mobile Development Repository: [Halowisata-Android](#)
+- Machine Learning Repository: [VisitCampus-Machine-Learning](https://github.com/sugama1001/VisitCampus)
+- Cloud Computing Repository: [VisitCampus-Cloud Computing](https://github.com/Fannyfdlsa/Cloud-VisitCampus.git)
+- Mobile Development Repository: [VisitCampus-Mobile Developement](https://github.com/deress/VisitCampus)
 
 ## Technology 👨‍💻
 
