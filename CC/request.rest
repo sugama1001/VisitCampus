@@ -1,0 +1,54 @@
+###
+GET http://localhost:3000/exams
+
+###
+GET http://localhost:3000/exams/870102/questions
+
+###
+GET http://localhost:3000/exams/870101/results
+
+###
+GET http://localhost:3000/universities
+
+###
+GET http://localhost:3000/universities/100104
+
+###
+GET http://localhost:3000/registration
+
+###
+GET http://localhost:3000/filter-univ
+Content-Type: application/json
+
+{
+  "type_univ": "Swasta",
+  "accreditation_univ": "Unggul",
+  "scope": "SOSHUM",
+  "major_name": "Analisis Keuangan",
+  "accreditation_major": "A"
+}
+
+###
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+  "name": "Handoko",
+  "email": "handoko22@gmail.com",
+  "password": "orangtampan"
+}
+
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "handoko22@gmail.com",
+  "password": "orangtampan"
+}
+
+
+###
+GET http://localhost:3000/auth/protectedRoute
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhhbmRva28yMkBnbWFpbC5jb20iLCJpZCI6MTEyMTA2LCJpYXQiOjE3MDI5NTEwOTd9.z0tAz6TWJDQg_MoU7b9UsRfq8ApjMe5hIyq_wn0D9sE
