@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.major.ResultMajorRecomendationActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appBarLayout"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/md_theme_light_primary">
+            <RelativeLayout
+                android:layout_width="110dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logo_visitcampus"
+                    android:contentDescription="@string/logo_visitcampus" />
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/title_result_major_recomendation"
+        android:textColor="@color/md_theme_light_primary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:alpha="0"
+        tools:alpha="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/appBarLayout"
+        />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/result_major_text"
+        android:textColor="#001E00"
+        android:textSize="16sp"
+        android:alpha="0"
+        tools:alpha="1"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_saintek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/saintek"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:alpha="0"
+        tools:alpha="1"
+        app:layout_constraintBottom_toTopOf="@id/percentage_bar"
+        app:layout_constraintStart_toStartOf="@id/percentage_bar"/>
+
+    <TextView
+        android:id="@+id/tv_soshum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/soshum"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:alpha="0"
+        tools:alpha="1"
+        app:layout_constraintBottom_toTopOf="@id/percentage_bar"
+        app:layout_constraintEnd_toEndOf="@id/percentage_bar"/>
+
+    <ProgressBar
+        android:id="@+id/percentage_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:progress="90"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="48dp"
+        android:alpha="0"
+        tools:alpha="1"
+        app:layout_constraintEnd_toEndOf="@+id/tv_title"
+        app:layout_constraintStart_toStartOf="@+id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_result"
+        android:progressDrawable="@drawable/custom_progress_bg"/>
+
+    <TextView
+        android:id="@+id/saintek_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/saintek_percent"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_marginStart="8dp"
+        android:textColor="#FFF"
+        android:alpha="0"
+        tools:alpha="1"
+        app:layout_constraintStart_toStartOf="@id/percentage_bar"
+        app:layout_constraintTop_toTopOf="@id/percentage_bar"
+        app:layout_constraintBottom_toBottomOf="@id/percentage_bar"/>
+
+    <TextView
+        android:id="@+id/soshum_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/soshum_percent"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_marginEnd="8dp"
+        android:alpha="0"
+        tools:alpha="1"
+        app:layout_constraintEnd_toEndOf="@id/percentage_bar"
+        app:layout_constraintTop_toTopOf="@id/percentage_bar"
+        app:layout_constraintBottom_toBottomOf="@id/percentage_bar"/>
+
+<!--    <ProgressBar-->
+<!--        android:id="@+id/percentage_bar"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="200dp"-->
+<!--        android:indeterminateOnly="false"-->
+<!--        android:progress="90"-->
+<!--        android:progressDrawable="@drawable/circle_percentage_bar"-->
+<!--        android:alpha="0"-->
+<!--        tools:alpha="1"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/tv_title"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/tv_title"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tv_title" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_progress"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="90%\nSAINTEK"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Large"-->
+<!--        android:alpha="0"-->
+<!--        tools:alpha="1"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/percentage_bar"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/percentage_bar"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/percentage_bar"-->
+<!--        app:layout_constraintTop_toTopOf="@id/percentage_bar" />-->
+
+    <Button
+        android:id="@+id/btn_finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="@string/finish"
+        android:alpha="0"
+        tools:alpha="1"
+        app:layout_constraintEnd_toEndOf="@+id/tv_result"
+        app:layout_constraintTop_toBottomOf="@id/percentage_bar" />
+
+    <Button
+        android:id="@+id/btn_try_again"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/try_again"
+        android:alpha="0"
+        tools:alpha="1"
+        app:layout_constraintEnd_toStartOf="@+id/btn_finish"
+        app:layout_constraintTop_toBottomOf="@id/percentage_bar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
