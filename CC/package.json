@@ -1,0 +1,22 @@
+{
+  "name": "visitcampus_api",
+  "version": "1.0.0",
+  "description": "Rest API VisitCampus",
+  "main": "index.js",
+  "scripts": {
+    "api-service": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "visitcampus_team",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.6.5",
+    "nodemon": "^3.0.2"
+  }
+}
