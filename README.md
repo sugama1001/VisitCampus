@@ -13,15 +13,15 @@ We are excited to develop an app that operates in the field of Education and Lea
 #### Hardware Requirements:
 
 - **Android Device:** Smartphone or tablet with Android OS
-- **Processor:** [Minimum required processor speed, e.g., 1.5 GHz or higher]
-- **RAM:** [Minimum required RAM, e.g., 2 GB or higher]
-- **Storage:** [Minimum required available storage, e.g., 50 MB]
+- **Processor:** [1.5 GHz or higher]
+- **RAM:** [2 GB or higher]
+- **Storage:** [50 MB]
 
 #### Software Requirements:
 
-- **Android OS:** Android [Minimum required Android version, e.g., 7.0 Nougat] or later
-- **Display:** Screen resolution of [Minimum required resolution, e.g., 720x1280 pixels] or higher
-- **Internet Connection:** Required for [Specify any features that require an internet connection, e.g., downloading data, updates]
+- **Android OS:** Android [7.0 Nougat] or later
+- **Display:** Screen resolution of [720x1280 pixels] or higher
+- **Internet Connection:** Required for [downloading data and updates]
 
 
 ## Team Member 👨‍👧‍👦
