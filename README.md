@@ -33,7 +33,7 @@ We are excited to develop an app that operates in the field of Education and Lea
 | Ahmad Sugama Farizim      | M315BSY1351 | Machine Learning    | Universitas Sriwijaya                      |[sugama1001](https://github.com/sugama1001/)          |                       
 | Hasbi Hussein Deri        | M315BSY0253 | Machine Learning    | Universitas Sriwijaya                      |[hasbihd](https://github.com/thesslow/)               |
 | Riza Nursyah              | M267BSY0837 | Machine Learning    | Universitas Muhammadiyah Sukabumi          |[rizanss](https://github.com/rizanss/)                |
-| Fanny Fadlilatunnisa      | C204BSX3832 | Cloud Computing     | Universitas Esa Unggul                     |[Fannyfdlsa](https://github.com/Fannyfdlsa/)          |
+| Fanny Fadlilatunnisa      | C204BSX3828 | Cloud Computing     | Universitas Esa Unggul                     |[Fannyfdlsa](https://github.com/Fannyfdlsa/)          |
 | Tasya Ramaniya Pramudhita | C204BSX3832 | Cloud Computing     | Universitas Esa Unggul                     |[tasyaramaniya](https://github.com/tasyaramaniya/)    |
 | Moch Yogi Firmansyah      | A284BSY2405 | Mobile Development  | Universitas Negeri Surabaya                |[yogiifirmansyah](https://github.com/yogiifirmansyah/)|
 | Idris Muhammad            | A227BSY2585 | Mobile Development  | Universitas Jember                         |[deress](https://github.com/deress)                   |
