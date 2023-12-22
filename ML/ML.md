@@ -20,15 +20,15 @@ link_model: https://drive.google.com/drive/folders/1b8CVOzZWkVxK01hY-WXz4E4Vup-m
 We concatenate these four models so that they become 1 model to recommend the scope of science  
 link_model: https://drive.google.com/drive/folders/1MxlcdGMnRdordX0Xl1GIr3PuBJvgAvjc
 
-# chatbot model
+# ChatBot model
 
-\*\*Question and Greetings Classification
-model link :https://drive.google.com/drive/folders/1vZ1REHKfOYdsyneOd8nt25ndcKcvk84l?usp=sharing
+**Question and Greetings Classification**  
+model link :https://drive.google.com/drive/folders/1vZ1REHKfOYdsyneOd8nt25ndcKcvk84l?usp=sharing  
 encoder link :https://drive.google.com/file/d/1-dE472t0KYOIBgcKddb6mSefVMfFwEqM/view?usp=sharing
 
-\*\*University Classification
-model link : https://drive.google.com/drive/folders/1-68mWCklXE6MviNQOnjwTqb3f2r5567O?usp=sharing
-encoder link : https://drive.google.com/file/d/1oGIMo7E3c_g447Lqr_0VXNrhfDSXaDT7/view?usp=sharing
+**University Classification**  
+model link : https://drive.google.com/drive/folders/1-68mWCklXE6MviNQOnjwTqb3f2r5567O?usp=sharing  
+encoder link : https://drive.google.com/file/d/1KMttVOSPJJEksLPw4EiWqaN47cmS2hv_/view?usp=sharing
 
-\*\*Chatbot Model
-model link
+**Chatbot Model**  
+model link : https://drive.google.com/drive/folders/1OSonBIvR-XX6OcQJT9QaJorQK16LKQkX?usp=drive_link
