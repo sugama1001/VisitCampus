@@ -5,6 +5,5 @@ gunicorn
 pillow
 joblib
 transformers
-deep_translator
 numpy
 tensorflow_hub
