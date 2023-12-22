@@ -14,7 +14,7 @@ link_model: https://drive.google.com/drive/folders/13Aoyboa68aHLKw73lz9ON4A0qiTW
 link_model: https://drive.google.com/file/d/1am-Q1f2YNMgNhIj2jV2WIMjhs1jRU1Zm/view?usp=sharing
 
 **Judging–Perceiving Classification**  
-link_model:
+link_model: https://drive.google.com/drive/folders/1b8CVOzZWkVxK01hY-WXz4E4Vup-mSn5t?usp=sharing
 
 **Scope of Science Reccomendation model**  
 We concatenate these four models so that they become 1 model to recommend the scope of science  
@@ -27,8 +27,8 @@ model link :https://drive.google.com/drive/folders/1vZ1REHKfOYdsyneOd8nt25ndcKcv
 encoder link :https://drive.google.com/file/d/1-dE472t0KYOIBgcKddb6mSefVMfFwEqM/view?usp=sharing
 
 \*\*University Classification
-model link :
-encoder link
+model link : https://drive.google.com/drive/folders/1-68mWCklXE6MviNQOnjwTqb3f2r5567O?usp=sharing
+encoder link : https://drive.google.com/file/d/1oGIMo7E3c_g447Lqr_0VXNrhfDSXaDT7/view?usp=sharing
 
 \*\*Chatbot Model
 model link
