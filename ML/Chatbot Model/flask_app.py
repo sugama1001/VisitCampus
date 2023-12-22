@@ -1,21 +1,44 @@
-from flask import Flask, jsonify, request
-import tensorflow as tf
-import numpy as np
-import tensorflow_text as text
-import tensorflow_hub
 import joblib
-from transformers import pipeline
-from deep_translator import GoogleTranslator
+import tensorflow as tf
 import random
+from transformers import pipeline, BertTokenizer
+from deep_translator import GoogleTranslator
 import json
+import numpy as np
+from flask import Flask, jsonify, request
+from transformers import pipeline
 
+def question_answering_loss(y_true, y_pred):
+    print(y_true,y_pred)
+    # Extract start_positions and end_positions from y_true
+    start_positions = y_true[:, 0]  # Assuming the start_positions are in the first column
+    end_positions = y_true[:, 1]    # Assuming the end_positions are in the second column
 
+    # Extract start_logits and end_logits from y_pred
+    start_logits = y_pred[:, :tf.shape(y_pred)[-1] // 2]
+    end_logits = y_pred[:, tf.shape(y_pred)[-1] // 2:]
+    print(start_logits,end_logits)
+
+    start_positions_one_hot = tf.one_hot(start_positions, depth=tf.shape(start_logits)[-1])
+    end_positions_one_hot = tf.one_hot(end_positions, depth=tf.shape(end_logits)[-1])
+
+    start_loss = tf.keras.losses.categorical_crossentropy(start_positions_one_hot, start_logits, from_logits=True)
+    end_loss = tf.keras.losses.categorical_crossentropy(end_positions_one_hot, end_logits, from_logits=True)
+
+    # Sum both losses
+    total_loss = start_loss + end_loss
+
+    return total_loss
+
+#setup variabel
 label_encoder = joblib.load('label_encoder.joblib')
-model_tanya = tf.keras.models.load_model('revisi_model_5w1h1g')
-model_univ = tf.keras.models.load_model('university_classification_model')
+model_tanya = tf.keras.models.load_model('/content/drive/MyDrive/revisi_model_5w1h1g')
+model_univ = tf.keras.models.load_model('/content/drive/MyDrive/university_classification_model')
+with tf.keras.utils.custom_object_scope({'question_answering_loss': question_answering_loss}):
+    model_chabot = tf.keras.models.load_model('/content/drive/MyDrive/chatbot')
+tokenizer = BertTokenizer.from_pretrained('cahya/bert-base-indonesian-522M')
 label_univ_encoder = joblib.load('university_encoder.joblib')
-qa = pipeline('question-answering')
-reply_list = ['Halo', 'Selamat Datang', 'Hai Teman']
+reply_list = ['Halo','Selamat Datang','Hai Teman']
 
 # ubah path sesuai dengan model machine learning Scope Of Science yang digunakan
 model_sos_path = "model_recommendation"
@@ -44,8 +67,6 @@ def pembobotan_elemen_MBTI(model_output_value, bobot):
         output_list[1].append(bobot_list[1])
 
     return output_list
-def translate_text(text, language, target_language):
-    return GoogleTranslator(source=language, target=target_language).translate(text=text)
 def get_personality_by_name(unive_name, json_university):
     for uni in json_university:
         if uni["univ_name"].lower() == unive_name.lower():
@@ -74,10 +95,21 @@ def filter_model(input):
         context = get_personality_by_name(predicted_class_univ_name, data_univ)
         if context is not None:
             question = input[0]
-            context = translate_text(context, 'id', 'en')
-            question = translate_text(question, 'id', 'en')
-            answer = qa(context=context, question=question)['answer']
-            answer = translate_text(answer, 'en', 'id')
+            inputs = tokenizer(question,context,return_tensors="tf")
+            answer = model_chabot.predict(dict(inputs))
+            start = int(tf.argmax(answer['start_logits'],axis=1))
+            end = int(tf.argmax(answer['end_logits'],axis=1))
+
+            if end-start == 0:
+              result = tf.reshape(inputs['input_ids'], [-1]).numpy()[start:end+1]
+            else:
+              result = list(inputs['input_ids'])[0][start:end]
+
+            token_ids = result.numpy()
+
+            # Konversi token ke bentuk string
+            tokens = tokenizer.convert_ids_to_tokens(token_ids)
+            answer = " ".join(tokens).replace(" ##", "")
 
             return answer
         else:
